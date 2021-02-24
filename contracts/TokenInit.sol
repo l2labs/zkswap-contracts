@@ -1,0 +1,37 @@
+pragma solidity ^0.5.0;
+
+contract TokenDeployInit {
+    function getTokens() internal pure returns (address[] memory) {
+        address[] memory tokens = new address[](29);
+        tokens[0] = 0xe4815AE53B124e7263F08dcDBBB757d41Ed658c6;
+        tokens[1] = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+        tokens[2] = 0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599;
+        tokens[3] = 0x0316EB71485b0Ab14103307bf65a021042c6d380;
+        tokens[4] = 0x6B3595068778DD592e39A122f4f5a5cF09C90fE2;
+        tokens[5] = 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984;
+        tokens[6] = 0x111111111117dC0aa78b770fA6A738034120C302;
+        tokens[7] = 0x0000000000095413afC295d19EDeb1Ad7B71c952;
+        tokens[8] = 0x3103dF8F05c4D8aF16fD22AE63E406b97FeC6938;
+        tokens[9] = 0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9;
+        tokens[10] = 0xBBbbCA6A901c926F240b89EacB641d8Aec7AEafD;
+        tokens[11] = 0xa1faa113cbE53436Df28FF0aEe54275c13B40975;
+        tokens[12] = 0x43Dfc4159D86F3A37A5A4B3D4580b888ad7d4DDd;
+        tokens[13] = 0x2ba592F78dB6436527729929AAf6c908497cB200;
+        tokens[14] = 0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e;
+        tokens[15] = 0xE66747a101bFF2dBA3697199DCcE5b743b454759;
+        tokens[16] = 0x11eeF04c884E24d9B7B4760e7476D06ddF797f36;
+        tokens[17] = 0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F;
+        tokens[18] = 0x3155BA85D5F96b2d030a4966AF206230e46849cb;
+        tokens[19] = 0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2;
+        tokens[20] = 0x514910771AF9Ca656af840dff83E8264EcF986CA;
+        tokens[21] = 0xB8c77482e45F1F44dE1745F52C74426C631bDD52;
+        tokens[22] = 0x6f259637dcD74C767781E37Bc6133cd6A68aa161;
+        tokens[23] = 0x75231F58b43240C9718Dd58B4967c5114342a86c;
+        tokens[24] = 0x408e41876cCCDC0F92210600ef50372656052a38;
+        tokens[25] = 0xa1d0E215a23d7030842FC67cE582a6aFa3CCaB83;
+        tokens[26] = 0x3472A5A71965499acd81997a54BBA8D852C6E53d;
+        tokens[27] = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+        tokens[28] = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
+        return tokens;
+    }
+}
