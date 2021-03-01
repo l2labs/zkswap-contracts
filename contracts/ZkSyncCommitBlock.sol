@@ -736,10 +736,10 @@ contract ZkSyncCommitBlock is PairTokenManager, Storage, Config, Events, Reentra
         totalCommittedPriorityRequests -= _number;
     }
 
-    // The contract is too large. Break some functions to zkSyncCommitBlockAddress
+    // The contract is too large. Break some functions to zkSyncExitAddress
     function() external payable {
         address nextAddress = zkSyncExitAddress;
-        require(nextAddress != address(0), "zkSyncCommitBlockAddress should be set");
+        require(nextAddress != address(0), "zkSyncExitAddress should be set");
         // Execute external function from facet using delegatecall and return any value.
         assembly {
             calldatacopy(0, 0, calldatasize())

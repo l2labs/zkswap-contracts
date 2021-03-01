@@ -55,17 +55,16 @@ contract VerifierExit is KeysWithPlonkSingleVerifier {
         bytes calldata _pair_data1,
         uint256[] calldata _proof
     ) external view returns (bool) {
-        return true;
-//        bytes memory _data1 = concatBytes(_account_data, _pair_data0);
-//        bytes memory _data2 = concatBytes(_data1, _pair_data1);
-//        bytes32 commitment = sha256(_data2);
-//
-//        uint256[] memory inputs = new uint256[](1);
-//        uint256 mask = (~uint256(0)) >> 3;
-//        inputs[0] = uint256(commitment) & mask;
-//        Proof memory proof = deserialize_proof(inputs, _proof);
-//        VerificationKey memory vk = getVkLpExit();
-//        require(vk.num_inputs == inputs.length);
-//        return verify(proof, vk);
+        bytes memory _data1 = concatBytes(_account_data, _pair_data0);
+        bytes memory _data2 = concatBytes(_data1, _pair_data1);
+        bytes32 commitment = sha256(_data2);
+
+        uint256[] memory inputs = new uint256[](1);
+        uint256 mask = (~uint256(0)) >> 3;
+        inputs[0] = uint256(commitment) & mask;
+        Proof memory proof = deserialize_proof(inputs, _proof);
+        VerificationKey memory vk = getVkLpExit();
+        require(vk.num_inputs == inputs.length);
+        return verify(proof, vk);
     }
 }
