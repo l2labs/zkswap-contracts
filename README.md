@@ -1,8 +1,13 @@
 # ZKSwap-contracts
 
 ## ZKSwap protocal
-ZKSwap is a layer2 AMM dex based on ethereum, using zkspeed protocal, the details are descirbed in the link:
-https://github.com/l2labs/zkswap-spec
+ZKSwap is a layer2 AMM dex based on ethereum, using zkspeed protocal:
+1. support AMM related transactions (create_pair, add_liquidity, remove_liquidity, swap)
+2. support pair token creation/management and enabling pair token transfer between L2 and L1
+3. enabling liquidity token exit if in exodus mode
+4. enable commit blocks feature - more blocks can be committed in one transaction 
+5. enable proof aggeration verification feature
+the details are descirbed in the link:https://github.com/l2labs/zkswap-spec
 
 
 ## Reference
